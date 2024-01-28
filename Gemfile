@@ -5,6 +5,10 @@ ruby "3.2.1"
 
 gem "sinatra"
 gem "sinatra-contrib"
+gem 'rest-client'
+gem 'uri'
+gem 'net-http'
+gem 'httparty'
 
 # Use Puma as the app server
 gem "puma", "~> 5.0"
