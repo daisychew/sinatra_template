@@ -15,11 +15,13 @@ post '/submit' do
 
   response = RestClient.post(api_url, {text: user_input})
 
-  api_hash = response.body
+  @raw_response = response.body.to_s
 
-  contents_hash = api_hash.fetch("contents")
+  @parsed_response = JSON.parse(@raw_response)
 
-  @yoda = parsed_data.fetch("translated")
+  @contents_hash = @parsed_response.fetch("contents")
+
+  @yoda = @contents_hash.fetch("translated")
 
   # render a view template where I show the symbols
   erb(:translation)
