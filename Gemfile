@@ -9,6 +9,8 @@ gem 'rest-client'
 gem 'uri'
 gem 'net-http'
 gem 'httparty'
+gem 'rest-client'
+gem 'json'
 
 # Use Puma as the app server
 gem "puma", "~> 5.0"
