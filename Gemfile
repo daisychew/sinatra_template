@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.2.1"
 
 gem "sinatra"
+gem "sinatra-contrib"
 gem 'rest-client'
 gem 'uri'
 gem 'net-http'
